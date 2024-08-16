@@ -403,7 +403,7 @@ footer{
 
 
 .iconos-redes-sociales i{
-  color:white;
+  color: red;
   font-size: 1.5rem;
   transition: all 0.2s ease-in;
 }
