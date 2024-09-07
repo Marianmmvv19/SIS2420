@@ -1,13 +1,63 @@
 /* Barra de navegacion*/
 
-.navbar{
-  padding: 2rem;
-  background-color: #f5f6f7;
+.navbar {
+  padding: 1rem 2rem;
+  background-color: #f0f8ff; /* Color azul suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
 }
-.navbar-collapse{
+
+.navbar:hover {
+  background-color: #e3eef7; /* Cambio de color en hover */
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease; /* Transición suave para el logo */
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1); /* Efecto de agrandamiento en hover */
+}
+
+/* Estilo de los ítems del navbar */
+.navbar-nav .nav-item .nav-link {
+  color: #333;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto hover para enlaces */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fff;
+  background-color: #007bff; 
+  border-radius: 5px; 
+}
+
+/* Estilo para el enlace activo */
+.navbar-nav .nav-item .nav-link.active {
+  color: #007bff;
+  background-color: transparent;
+  border-bottom: 2px solid #007bff; 
+}
+
+/* Para colapsar y distribuir el contenido en dispositivos móviles */
+.navbar-collapse {
   align-items: center;
   justify-content: space-between;
 }
+
+/* Estilo del botón de hamburguesa (navbar-toggler) */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 
 
 /* Estilos generales*/
