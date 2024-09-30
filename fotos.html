@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Fotos</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Galería de Imágenes Desordenadas</title>
     <style>
         body {
             background-color: #f0f8ff;
             color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         .galeria {
-            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
             padding: 20px;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 30px;
-            font-weight: bold;
-            color: #007bff;
         }
 
         .foto-container {
@@ -33,119 +26,72 @@
             overflow: hidden;
             border-radius: 10px;
             transition: transform 0.3s;
-            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .foto-container:hover {
+            transform: scale(1.05);
         }
 
         .foto {
-            border-radius: 10px;
-            transition: transform 0.3s;
             display: block;
-            width: 100%;
-            height: auto;
+            width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            border-radius: 10px;
         }
 
-        .foto-container:hover .foto {
-            transform: scale(1.05);
+        @media (min-width: 576px) {
+            .foto-container {
+                width: calc(33.33% - 10px); /* 3 columnas */
+            }
         }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-            text-align: center;
+        @media (min-width: 768px) {
+            .foto-container {
+                width: calc(25% - 10px); 
+            }
         }
 
-        .foto-container:hover .overlay {
-            opacity: 1;
-        }
-
-        .btn-regresar {
-            margin-top: 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .btn-regresar:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
+        @media (max-width: 575px) {
+            .foto-container {
+                width: calc(50% - 10px); 
+            }
         }
     </style>
 </head>
 <body>
-    <div class="galeria">
-        <h2 class="section-title">Galería de Fotos</h2>
-        <div class="row">
-            <!-- Foto 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="foto-container">
-                    <img src="imagenes/1.jpg" class="img-fluid foto" alt="Foto 1">
-                    <div class="overlay">
-                        <h3>foto 1</h3>
-                 
-                    </div>
-                </div>
-            </div>
-            <!-- Foto 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="foto-container">
-                    <img src="imagenes/2.jpg" class="img-fluid foto" alt="Foto 2">
-                    <div class="overlay">
-                        <h3>Proyecto 2</h3>
-                    
-                    </div>
-                </div>
-            </div>
-            <!-- Foto 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="foto-container">
-                    <img src="imagenes/3.jpg" class="img-fluid foto" alt="Foto 3">
-                    <div class="overlay">
-                        <h3>foto 3</h3>
-                     
-                    </div>
-                </div>
-            </div>
-              <!-- Foto 4 -->
-              <div class="col-md-4 mb-4">
-                <div class="foto-container">
-                    <img src="imagenes/4.jpg" class="img-fluid foto" alt="Foto 3">
-                    <div class="overlay">
-                        <h3>foto 4</h3>
-                       
-                    </div>
-                </div>
-            </div>
-              <!-- Foto 5 -->
-              <div class="col-md-4 mb-4">
-                <div class="foto-container">
-                    <img src="imagenes/5.jpg" class="img-fluid foto" alt="Foto 3">
-                    <div class="overlay">
-                        <h3>foto 5</h3>
-                   
-                    </div>
-                </div>
-            </div>
-        </div>
-     
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="galeria">
+<h1>Galeria de Fotos e ilustraciones</h1>
+        <div class="foto-container"><img src="imagenes/25.jpg" class="foto" alt="Imagen 5"></div>
+        <div class="foto-container"><img src="imagenes/27.jpg" class="foto" alt="Imagen 7"></div>
+        <div class="foto-container"><img src="imagenes/28.jpg" class="foto" alt="Imagen 8"></div>
+        <div class="foto-container"><img src="imagenes/29.jpg" class="foto" alt="Imagen 9"></div>
+        <div class="foto-container"><img src="imagenes/30.jpg" class="foto" alt="Imagen 10"></div>
+        <div class="foto-container"><img src="imagenes/31.jpg" class="foto" alt="Imagen 1"></div>
+       
+        <div class="foto-container"><img src="imagenes/1.jpg" class="foto" alt="Imagen 1"></div>
+        <div class="foto-container"><img src="imagenes/2.jpg" class="foto" alt="Imagen 2"></div>
+        <div class="foto-container"><img src="imagenes/3.jpg" class="foto" alt="Imagen 3"></div>
+        <div class="foto-container"><img src="imagenes/4.jpg" class="foto" alt="Imagen 4"></div>
+        <div class="foto-container"><img src="imagenes/5.jpg" class="foto" alt="Imagen 5"></div>
+        <div class="foto-container"><img src="imagenes/6.jpg" class="foto" alt="Imagen 6"></div>
+        <div class="foto-container"><img src="imagenes/7.jpg" class="foto" alt="Imagen 7"></div>
+        <div class="foto-container"><img src="imagenes/10.jpg" class="foto" alt="Imagen 10"></div>
+        <div class="foto-container"><img src="imagenes/11.jpg" class="foto" alt="Imagen 1"></div>
+        <div class="foto-container"><img src="imagenes/12.jpg" class="foto" alt="Imagen 2"></div>
+        <div class="foto-container"><img src="imagenes/13.jpg" class="foto" alt="Imagen 3"></div>
+        <div class="foto-container"><img src="imagenes/14.jpg" class="foto" alt="Imagen 4"></div>
+        <div class="foto-container"><img src="imagenes/15.jpg" class="foto" alt="Imagen 5"></div>
+        <div class="foto-container"><img src="imagenes/16.jpg" class="foto" alt="Imagen 6"></div>
+        <div class="foto-container"><img src="imagenes/17.jpg" class="foto" alt="Imagen 7"></div>
+        <div class="foto-container"><img src="imagenes/19.jpg" class="foto" alt="Imagen 9"></div>
+        <div class="foto-container"><img src="imagenes/20.jpg" class="foto" alt="Imagen 10"></div>
+        <div class="foto-container"><img src="imagenes/21.jpg" class="foto" alt="Imagen 1"></div>
+        <div class="foto-container"><img src="imagenes/22.jpg" class="foto" alt="Imagen 2"></div>
+        <div class="foto-container"><img src="imagenes/23.jpg" class="foto" alt="Imagen 3"></div>
+        <div class="foto-container"><img src="imagenes/24.jpg" class="foto" alt="Imagen 4"></div>
+       
+    </div>
 </body>
 </html>
