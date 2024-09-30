@@ -41,6 +41,9 @@
               <a class="nav-link" href="#proyectos">Proyectos</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#fotos" >Fotos</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#testimonios" >Testimonios</a>
             </li>
             <li class="nav-item">
@@ -189,51 +192,16 @@
                     </div>
                 </div>
               </a>
-                <!--imagenes -->
-            <a class="col-12 col-md-6 col-lg-4 mb-4" href="#">
-              <div class="proyecto">
-                  <img src="imagenes/1.jpg" alt="" class="img-fluid">
-                  <div class="overlay">
-                     
-                  </div>
-              </div>
-            </a>
-            <a class="col-12 col-md-6 col-lg-4 mb-4" href="#">
-              <div class="proyecto">
-                  <img src="imagenes/2.jpg" alt="" class="img-fluid">
-                  <div class="overlay">
-                     
-                  </div>
-              </div>
-            </a>
-            <a class="col-12 col-md-6 col-lg-4 mb-4" href="#">
-              <div class="proyecto">
-                  <img src="imagenes/3.jpg" alt="" class="img-fluid">
-                  <div class="overlay">
-                     
-                  </div>
-              </div>
-            </a>
-            <a class="col-12 col-md-6 col-lg-4 mb-4" href="#">
-              <div class="proyecto">
-                  <img src="imagenes/4.jpg" alt="" class="img-fluid">
-                  <div class="overlay">
-                     
-                  </div>
-              </div>
-            </a>
-            <a class="col-12 col-md-6 col-lg-4 mb-4" href="#">
-              <div class="proyecto">
-                  <img src="imagenes/5.jpg" alt="" class="img-fluid">
-                  <div class="overlay">
-                     
-                  </div>
-              </div>
+          
             </a>
             
             
            
         </div>
+
+
+
+
     </div>
     <a href="vermas.html" target="_blank" rel="noopener noreferrer">
         <button type="button" class="btn btn-info">
@@ -242,6 +210,120 @@
         </button>
     </a>
 </section>
+<!--Galería de Fotos-->
+<section class="galeria seccion-clara py-5" id="fotos">
+  <div class="container text-center">
+    <h2 class="section-title mb-5">Galería de Fotos</h2>
+    <div class="row">
+      <!-- Foto 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="foto-container">
+          <img src="imagenes/1.jpg" class="img-fluid foto" alt="Foto 1">
+          <div class="overlay1">
+            <h3>foto 1</h3>
+  
+          </div>
+        </div>
+      </div>
+      <!-- Foto 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="foto-container">
+          <img src="imagenes/2.jpg" class="img-fluid foto" alt="Foto 2">
+          <div class="overlay1">
+            <h3>foto 2</h3>
+ 
+          </div>
+        </div>
+      </div>
+      <!-- Foto 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="foto-container">
+          <img src="imagenes/3.jpg" class="img-fluid foto" alt="Foto 3">
+          <div class="overlay1">
+            <h3>foto 3</h3>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="fotos.html" target="_blank" class="btn btn-elegante" >Ver Más Fotos</a>
+  </div>
+</section>
+
+<style>
+  .galeria {
+    background-color: #f9f9f9;
+    padding: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .foto-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+
+  .foto {
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+
+  .foto:hover {
+    transform: scale(1.05);
+  }
+
+  .overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .foto-container:hover .overlay1 {
+    opacity: 1;
+  }
+
+  .btn-elegante {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .btn-elegante:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 91, 187, 0.3);
+  }
+</style>
+
+
+
+
    <!--Articulos-->
    <section class="articulos justify-content-start">
      <h2 class="seccion-titulo texto-negro">Articulos</h2>
@@ -335,31 +417,30 @@
   </div>
 </section>
 
-   <!--Contacto-->
-   <section id="contacto" class="contacto ">
-    <div class="container">
+ <!--Contacto-->
+<section id="contacto" class="contacto">
+  <div class="container">
       <div class="container text-center rectangulo d-flex justify-content-evenly">
-        <div class="row">
-          <div class="col-12 col-md-4 seccion-titulo">
-            Hablemos!!
+          <div class="row">
+              <div class="col-12 col-md-4 seccion-titulo">
+                  Hablemos!!
+              </div>
+              <div class="col-12 col-md-4 description" style="color:#fff; font-size:20px;">
+                  Contáctame para iniciar tu proyecto de desarrollo Web y haré que tu visión se haga realidad.
+              </div>
+              <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                  <a href="mailto:marianmarcelavasquez@gmail.com">
+                      <button type="button" class="btn btn-primary">
+                          Contacto
+                          <i class="bi bi-envelope-arrow-down-fill"></i>
+                      </button>
+                  </a>
+              </div>
           </div>
-          <div class="col-12 col-md-4 description" style="color:#fff;font-size:20px;">
-            Contáctame para iniciar tu proyecto de desarrollo Web y haré que tu visión se haga realidad. 
-             <div class="col-12 col-md-4">
-              <a href="mailto:marianmarcelavasquez@gmail.com ">
-                <button type="button">
-                     Contacto
-                         <i class="bi bi-envelope-arrow-down-fill"></i>
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
+  </div>
+</section>
 
-    </div>
-
-   </section>
 
 
 
